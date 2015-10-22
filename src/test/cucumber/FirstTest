@@ -1,0 +1,42 @@
+@calc
+Feature: Calculator
+
+  In order to use a good simple calculator
+  As a user
+  I want to get correct results
+
+  @add
+  Scenario: Addition
+    Given I am using a calculator
+    When I input '5+2'
+    Then the result is 7
+
+  @subtract
+  Scenario: Subtraction
+    Given I am using a calculator
+    When I input '5-2'
+    Then the result is 3
+
+  @multiply
+  Scenario: Multiplication
+    Given I am using a calculator
+    When I input '5*2'
+    Then the result is 10
+
+  @divide
+  Scenario: Division
+    Given I am using a calculator
+    When I input '6/2'
+    Then the result is 3
+
+  @all @add @subtract @multiply @divide
+  Scenario Outline: Arithmetic
+    Given I am using a calculator
+    When I input '<first><operator><second>'
+    Then the result is <result>
+    Examples:
+      | first | operator | second | result |
+      | 6     | +        | 2      | 8      |
+      | 7     | -        | 3      | 4      |
+      | 5     | *        | 2      | 10     |
+      | 4     | /        | 2      | 2      |

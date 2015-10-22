@@ -1,0 +1,11 @@
+Feature: PaintProgram
+
+  In order to fully use the Paint program
+  As a user
+  I want to be able to use the Colour Picker
+
+  Scenario: ColourPicker
+    Given I am in Paint program
+    Then I can use the Colour Picker
+
+    Scenario:

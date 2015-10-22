@@ -1,0 +1,15 @@
+Feature: GoogleImages
+
+  In order to get 3 images of a pink monkey
+  As a researcher
+  I want to be able to search in Google Images for a colourful monkey
+
+  Scenario: PinkMonkey
+    Given I am on Google Images
+    When I search for 'most colourful monkey'
+    Then I get more than 3 images with a pink monkey
+
+  Scenario: BoringZebra
+    Given I am on Google Images
+    When I search for 'boring zebra'
+    Then I get no images with orange and red polka dot zebra
