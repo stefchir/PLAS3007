@@ -1,0 +1,25 @@
+Feature: Markets
+
+  In order to keep up with markets
+  As a market bidder
+  I want to keep updated all the time
+
+  Scenario: MarketsView
+    Given I am on the home page
+    Then I see the updated top markets
+
+  Scenario: MarketsUpdate
+    Given I am seeing the Markets section
+    When I wait for 15 minutes
+    Then The section is updated automatically
+
+  Scenario Outline: MarketDetails
+    Given I am seeing the Markets section
+    When I click on <market>
+    Then I get a page with all the details of <market>
+    Examples:
+      | market     |
+      | FTSE 100   |
+      | Dow Jones  |
+      | Nasdaq     |
+      | Nikkei 225 |

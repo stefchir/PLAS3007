@@ -7,5 +7,3 @@ Feature: PaintProgram
   Scenario: ColourPicker
     Given I am in Paint program
     Then I can use the Colour Picker
-
-    Scenario:

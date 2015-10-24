@@ -1,0 +1,23 @@
+Feature: NewsMenu
+
+  In order to see news from different categories
+  As a user
+  I want to be able to navigate through a menu of categories
+
+  Scenario Outline: NewsCategories
+    Given I am on the BBC News website
+    When I click on the <category> news category menu item
+    Then I get the news under <category>
+    Examples:
+      | category             |
+      | Home                 |
+      | Video                |
+      | World                |
+      | UK                   |
+      | Business             |
+      | Tech                 |
+      | Science              |
+      | Magazine             |
+      | Entertainment & Arts |
+      | Health               |
+      | In Pictures          |

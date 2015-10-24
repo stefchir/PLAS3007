@@ -1,0 +1,17 @@
+Feature: Calculator
+
+  In order to use a good simple calculator
+  As a user
+  I want to get correct results
+
+  Scenario Outline: Arithmetic
+    Given I have a calculator
+    When I input '<num1><operator><num2>'
+    Then I get <result> as answer
+    Examples:
+      | num1 | operator | num2 | result   |
+      | 5    | +        | 2    | 7        |
+      | 158  | *        | 22   | 3476     |
+      | 10   | -        | 2    | 8        |
+      | 12   | /        | 6    | 2        |
+      | 5    | /        | 0    | Infinity |

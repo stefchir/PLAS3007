@@ -1,0 +1,15 @@
+Feature: WatchListen
+
+  In order to watch and listen to videos
+  As a user
+  I want a section containing news videos
+
+  Scenario: LiveRadio
+    Given I have a link to the Live radio news
+    When I click on the link
+    Then I start hearing the news radio
+
+  Scenario: Videos
+    Given I have news videos
+    When I click on one
+    Then The video starts playing
