@@ -7,9 +7,20 @@ Feature: GoogleImages
   Scenario: PinkMonkey
     Given I am on Google Images
     When I search for 'most colourful monkey'
-    Then I get more than 3 images with a pink monkey
+    Then I get 'at least 3' images with a 'pink monkey'
 
   Scenario: BoringZebra
     Given I am on Google Images
     When I search for 'boring zebra'
-    Then I get no images with orange and red polka dot zebra
+    Then I get '0' images with 'orange and red polka dot zebra'
+
+  --OR--
+
+  Scenario Outline: Image Search
+    Given I navigate to Google Search
+    When I search for '<search>'
+    Then there are '<occurences>' images that contain '<result>'
+    Examples:
+      | search                | occurences | result                         |
+      | most colourful monkey | at least 3 | pink monkey                    |
+      | boring zebra          | 0          | orange and red polka dot zebra |

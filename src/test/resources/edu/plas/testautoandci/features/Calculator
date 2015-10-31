@@ -29,6 +29,8 @@ Feature: Calculator
     When I input '6/2'
     Then the result is 3
 
+  --OR--
+
   @all @add @subtract @multiply @divide
   Scenario Outline: Arithmetic
     Given I am using a calculator
